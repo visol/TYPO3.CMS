@@ -45,7 +45,7 @@ if (defined('E_DEPRECATED')) {
 } else {
 	error_reporting(E_ALL ^ E_NOTICE);
 }
-PATH_thisScript = str_replace('//', '/', str_replace('\\', '/',
+$PATH_thisScript = str_replace('//', '/', str_replace('\\', '/',
 	(PHP_SAPI == 'fpm-fcgi' || PHP_SAPI == 'cgi' || PHP_SAPI == 'isapi' || PHP_SAPI == 'cgi-fcgi') &&
 	($_SERVER['ORIG_PATH_TRANSLATED'] ? $_SERVER['ORIG_PATH_TRANSLATED'] : $_SERVER['PATH_TRANSLATED']) ?
 	($_SERVER['ORIG_PATH_TRANSLATED'] ? $_SERVER['ORIG_PATH_TRANSLATED'] : $_SERVER['PATH_TRANSLATED']) :
